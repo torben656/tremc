@@ -2290,7 +2290,7 @@ class Interface(object):
     def create_filelist(self):
         # Build new mapping between sorted local files and transmission-daemon's unsorted files.
         if self.filelist_needs_refresh:
-            self.filelist_needs_refresh = False
+            self.filelist_needs_refresh = True
             self.file_index_map = {}
             self.sorted_files = sorted(self.torrent_details['files'], key=lambda x: x['name'])
             for index, file in enumerate(self.sorted_files):
